@@ -30,6 +30,9 @@ function to free the heap memory
 */
 void freeMemory(TouristVehicle* arr[SIZE]);
 
+bool checkAllNull(TouristVehicle* arr[SIZE]);
+
+
 
 
 

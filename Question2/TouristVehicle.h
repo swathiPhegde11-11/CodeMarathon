@@ -18,7 +18,7 @@ public:
         float per_hour_booking_charge
     );
     ~TouristVehicle() {
-        std::cout<<"\nTouristVehicle with number "<<number()<<" is deleted";
+        std::cout<<"\nTouristVehicle with number "<<number()<<" is deleted\n";
     }
     
 
@@ -33,4 +33,5 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const TouristVehicle &rhs);
 };
 
+std::string displayEnum(const VehicleType type);
 #endif // TOURISTVEHICLE_H

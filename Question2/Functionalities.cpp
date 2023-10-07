@@ -3,13 +3,16 @@
 void createObject(TouristVehicle *arr[SIZE])
 {
     arr[0]=new TouristVehicle("V101",VehicleType::CAB,5,353.7f);
-    arr[1]=new TouristVehicle("V102",VehicleType::BUS,5,53.7f);
-    arr[2]=new TouristVehicle("V103",VehicleType::CAB,5,533.7f);
+    arr[1]=new TouristVehicle("V102",VehicleType::BUS,3,53.7f);
+    arr[2]=new TouristVehicle("V103",VehicleType::CAB,4,533.7f);
 
 }
 
 void vehicelWithSeatCoun(TouristVehicle *arr[SIZE], TouristVehicle *result[SIZE])
 {
+     if(checkAllNull(arr)){
+        std::cout<<"Array is empty";
+    }
     int j=0;
     for(int i=0;i<SIZE;i++){
         if(arr[i]->seatCount()>=4){
@@ -20,6 +23,9 @@ void vehicelWithSeatCoun(TouristVehicle *arr[SIZE], TouristVehicle *result[SIZE]
 
 float averageOfCAB(TouristVehicle *arr[SIZE])
 {
+     if(checkAllNull(arr)){
+        std::cout<<"Array is empty";
+    }
     float average=0.0f;
     int count=0;
     for(int i=0;i<SIZE;i++){
@@ -34,6 +40,9 @@ float averageOfCAB(TouristVehicle *arr[SIZE])
 
 void maximumPerHourCharge(TouristVehicle *arr[SIZE])
 {
+    if(checkAllNull(arr)){
+        std::cout<<"Array is empty";
+    }
     TouristVehicle* vehicle{nullptr};
     float max=arr[0]->perHourBookingCharge();
     float currentMax=0.0f;
@@ -52,4 +61,14 @@ void freeMemory(TouristVehicle *arr[SIZE])
     for(int i=0;i<SIZE;i++){
         delete arr[i];
     }
+}
+
+bool checkAllNull(TouristVehicle *arr[SIZE])
+{
+    for(int i=0;i<SIZE;i++){
+        if(arr[i]!=nullptr){
+            return false;
+        }
+    }
+    return true;
 }
