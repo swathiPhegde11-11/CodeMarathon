@@ -17,6 +17,7 @@ public:
         Invoice* billAssociatedInvce
     );
     ~Bill() {
+        delete billAssociatedInvce();
         std::cout<<"\nBill amount "<<billAmount()<<" is deleted\n";
     }
 
