@@ -16,7 +16,6 @@ int main(){
         std::cout<<"Account with minimum account balance : Account Number : \n"<<*accounts[ind]<<"\n";
         //minimumAccountBalance(accounts);
         
-        SavingsAccount* a1=new SavingsAccount(4343,878.8f,988.9f,SavingType::METRO);
 
         freeMemory(accounts);
 

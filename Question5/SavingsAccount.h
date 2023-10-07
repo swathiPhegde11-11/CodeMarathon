@@ -19,9 +19,6 @@ public:
         std::cout<<"\nSavings Account with number : "<<accountNumber()<<" is deleted\n";
     }
 
-    void operator=(const SavingsAccount *sv){
-        SavingsAccount(*sv);
-    }
     
     float CalculateInterestAmount() override;
 

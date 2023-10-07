@@ -24,9 +24,9 @@ public:
 
     virtual float CalculateInterestAmount()=0;
 
-    void operator=(const Account* acc){
-         Account(*acc);
-    }
+    // void operator=(const Account* acc){
+    //      Account(*acc);
+    // }
 
     long accountNumber() const { return _accountNumber; }
 
