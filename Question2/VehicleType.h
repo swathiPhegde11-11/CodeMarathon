@@ -2,7 +2,7 @@
 #define VEHICLETYPE_H
 
 enum class VehicleType{
-    CAR,
+    CAB,
     BUS,
     BIKE
 };

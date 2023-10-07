@@ -17,7 +17,10 @@ public:
         int seat_count,
         float per_hour_booking_charge
     );
-    ~TouristVehicle() {}
+    ~TouristVehicle() {
+        std::cout<<"\nTouristVehicle with number "<<number()<<" is deleted";
+    }
+    
 
     std::string number() const { return _number; }
 
@@ -26,6 +29,8 @@ public:
     int seatCount() const { return _seat_count; }
 
     float perHourBookingCharge() const { return _per_hour_booking_charge; }
+
+    friend std::ostream &operator<<(std::ostream &os, const TouristVehicle &rhs);
 };
 
 #endif // TOURISTVEHICLE_H
